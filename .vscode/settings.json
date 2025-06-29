@@ -1,0 +1,27 @@
+{
+  // 開発者エディタで独自に動く可能性があるESLintとPrettierを無効化
+  "eslint.enable": false,
+  "prettier.enable": false,
+  // フォーマッターをBiomeに設定
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome",
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  // importを絶対パスで補完
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  // emmet記法は邪魔なのでsuggestの最後にする
+  "emmet.showSuggestionsAsSnippets": true,
+  "editor.snippetSuggestions": "bottom"
+}

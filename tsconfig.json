@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": [
+      "es2022"
+    ],
+    "declaration": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "outDir": "dist/nodejs/node_modules/lambda-layer",
+    "paths": {
+      "@shared/*": [
+        "./app/layers/shared/nodejs/*"
+      ],
+      "@ext-libs/*": [
+        "./app/layers/ext-libs/nodejs/node_modules/*"
+      ],
+      "@aws-sdk/*": [
+        "./app/layers/aws-sdk/nodejs/node_modules/@aws-sdk/*"
+      ]
+    },
+  },
+  "exclude": [
+    "node_modules",
+    "cdk.out"
+  ]
+}

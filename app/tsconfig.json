@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "outDir": "../dist/app",
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": [
+        "layers/shared/nodejs/*"
+      ],
+      "@ext-libs/*": [
+        "layers/ext-libs/nodejs/node_modules/*"
+      ],
+      "@aws-sdk/*": [
+        "layers/aws-sdk/nodejs/node_modules/@aws-sdk/*"
+      ]
+    },
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "declaration": false,
+    "sourceMap": false
+  },
+  "include": [
+    "lambda/**/*.ts",
+    "layers/shared/nodejs/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "layers/*/nodejs/node_modules"
+  ]
+}
