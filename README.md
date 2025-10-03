@@ -159,7 +159,7 @@ Create an IAM role that allows GitHub Actions to deploy your CDK stack.
                "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
              },
              "StringLike": {
-               "token.actions.githubusercontent.com:sub": "repo:YOUR_GITHUB_USERNAME/YOUR_REPO_NAME:*"
+               "token.actions.githubusercontent.com:sub": "repo:YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/*"
              }
            }
          }
@@ -177,7 +177,7 @@ Create an IAM role that allows GitHub Actions to deploy your CDK stack.
 
 In your GitHub repository, go to **Settings** → **Secrets and variables** → **Actions** and add:
 
-- `AWS_ROLE_TO_ASSUME`: The ARN of the IAM role created above
+- `AWS_ROLE_TO_ASSUME`: The ARN of the IAM role created above like `arn:aws:iam::YOUR_ACCOUNT_ID:role/GitHubActionsCDKDeployRole`
 
 ### 🔄 Deployment Workflow
 
