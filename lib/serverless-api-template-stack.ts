@@ -4,7 +4,9 @@ import * as nodejs from 'aws-cdk-lib/aws-lambda-nodejs'
 import * as logs from 'aws-cdk-lib/aws-logs'
 import * as sfn from 'aws-cdk-lib/aws-stepfunctions'
 import * as tasks from 'aws-cdk-lib/aws-stepfunctions-tasks'
+
 import { Construct } from 'constructs'
+
 import * as path from 'node:path'
 
 export class ServerlessApiTemplateStack extends cdk.Stack {

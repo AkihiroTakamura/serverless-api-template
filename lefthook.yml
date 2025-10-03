@@ -48,12 +48,12 @@ pre-commit:
     biome-lambda:
       root: app/
       glob: "app/**/*.{ts,tsx}"
-      run: npx @biomejs/biome@1.9.4 check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+      run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
 
     biome-cdk:
       root: lib/
       glob: "lib/**/*.{ts,tsx}"
-      run: npx @biomejs/biome@1.9.4 check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+      run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
 
     type-check-lambda:
       root: app/
