@@ -7,11 +7,24 @@ import * as tasks from 'aws-cdk-lib/aws-stepfunctions-tasks'
 
 import { Construct } from 'constructs'
 
+import { Config } from '../bin/config-schema'
+
 import * as path from 'node:path'
 
+interface ServerlessApiTemplateStackProps extends cdk.StackProps {
+  config: Config
+}
+
 export class ServerlessApiTemplateStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+  constructor(
+    scope: Construct,
+    id: string,
+    props: ServerlessApiTemplateStackProps,
+  ) {
     super(scope, id, props)
+
+    const { config } = props
+    console.log('Region:', config.AWS_REGION)
 
     // Lambda Layers
     const extLibsLayer = new lambda.LayerVersion(this, 'ExtLibsLayer', {
