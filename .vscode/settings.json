@@ -6,9 +6,10 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "biomejs.biome",
   "editor.codeActionsOnSave": {
-    "quickfix.biome": "explicit",
-    "source.organizeImports": "explicit",
-    "source.organizeImports.biome": "explicit"
+    "source.organizeImports": "never",
+    "source.organizeImports.biome": "explicit",
+    "source.fixAll.biome": "explicit",
+    "source.removeUnusedImports": "explicit"
   },
   "[typescript]": {
     "editor.defaultFormatter": "biomejs.biome",
@@ -23,5 +24,19 @@
   "typescript.preferences.importModuleSpecifier": "non-relative",
   // emmet記法は邪魔なのでsuggestの最後にする
   "emmet.showSuggestionsAsSnippets": true,
-  "editor.snippetSuggestions": "bottom"
+  "editor.snippetSuggestions": "bottom",
+  "git.ignoreLimitWarning": true,
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "必ず英語で記述してください。"
+    },
+    {
+      "text": "コミットメッセージは、最初にConventional Commitsに則って記述してください。"
+    },
+    {
+      "text": "その後ファイルごとの詳細な変更内容を記述してください。"
+    }
+  ],
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "editor.colorDecorators": true
 }
